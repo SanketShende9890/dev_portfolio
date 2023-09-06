@@ -1,38 +1,150 @@
-.App {
+header {
+  background-color: transparent;
+  position: fixed;
+  z-index: 50;
+  width: 100%;
+}
+main {
+  /* padding-top: 100px; */
+  background-color: #040415;
+  position: relative;
+  z-index: 1;
+  overflow-x: hidden;
+}
+.first-glow {
+  position: absolute;
+  z-index: -1;
+  left: -340px;
+  top: -270px;
+  width: 600px;
+  height: 630px;
+  border-radius: 396px;
+  background: rgba(65, 107, 255, 0.2);
+  filter: blur(295px);
+}
+.second-glow {
+  position: absolute;
+  z-index: -1;
+  right: -440px;
+  top: 220px;
+  width: 600px;
+  height: 800px;
+  border-radius: 396px;
+  background: rgba(251, 140, 120, 0.2);
+  filter: blur(295px);
+}
+.third-glow {
+  position: absolute;
+  z-index: -1;
+  left: -350px;
+  top: 1130px;
+  width: 840px;
+  height: 400px;
+  border-radius: 396px;
+  background: rgba(194, 65, 255, 0.2);
+  filter: blur(295px);
+}
+.fourth-glow {
+  position: absolute;
+  z-index: -1;
+  right: -380px;
+  top: 1800px;
+  width: 602px;
+  height: 500px;
+  border-radius: 396px;
+  background: rgba(255, 245, 160, 0.2);
+  filter: blur(295px);
+}
+.fifth-glow {
+  position: absolute;
+  z-index: -1;
+  left: -330px;
+  top: 2930px;
+  width: 752px;
+  height: 500px;
+  border-radius: 396px;
+  background: rgba(220, 76, 136, 0.2);
+  filter: blur(295px);
+}
+
+.heading-title {
+  font-family: "Inconsolata", monospace;
+  font-size: 30px;
+  font-weight: 800;
+  color: #44c9b0;
+  /* margin: 35px 0; */
+  letter-spacing: 1px;
+}
+.heading-title span {
+  font-family: "Inconsolata", monospace;
+  color: #ffffff;
+}
+.component-tile {
+  background-color: transparent;
+  border-radius: 35px;
+  border: 1px solid #fff;
+  padding: 20px;
+  margin-bottom: 70px;
+}
+.component-tile h1 {
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 40px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.component-tile p {
+  text-align: center;
+}
+.component-tile a {
+  text-decoration: none;
+  color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.about-me-text {
+  font-size: 20px;
+  padding: 0 30px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.about-me-text span {
+  font-size: 30px;
+  font-weight: 600;
 }
-
-.App-link {
-  color: #61dafb;
+.about-me-text img {
+  width: 36px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.about-image {
+  background-image: url(./assets/Frame.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  width: 300px;
+  border-radius: 200px;
+}
+.project-preview-image {
+  /* background-image: url(./assets/project_preview.jpg); */
+  background-position: 0 center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+  border-radius: 20px;
+  transition: all 10000ms ease-in-out;
+  cursor: pointer;
+  border: 1px solid #fff;
+  position: relative;
+}
+.control-up {
+  border: 1px solid red;
+  height: calc(100% / 3);
+}
+.control-middle {
+  border: 1px solid red;
+  height: calc(100% / 3);
+}
+.control-down {
+  border: 1px solid red;
+  height: calc(100% / 3);
+}
+footer{
+  background-color: #262626;
 }
