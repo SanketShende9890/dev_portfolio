@@ -1,37 +1,110 @@
 .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  background-color: transparent;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+}
+.navbar-bg {
+  background: linear-gradient(
+    135deg,
+    rgba(28, 28, 28, 0.2) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  backdrop-filter: blur(25px);
+}
+.navbar a {
+  margin: 0 20px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+.header-title {
+  font-family: "Inconsolata", monospace;
+  font-size: 30px;
+  font-weight: 800;
+  color: #44c9b0;
+  margin: 0 0 0 35px;
+  letter-spacing: 1px;
+}
+.header-title span {
+  font-family: "Inconsolata", monospace;
+  color: #ffffff;
+}
+.web-menu {
+  display: none;
+}
+.web-menu a{
+  padding: 5px 0;
+}
+.web-menu a:hover{
+  border-bottom: 1px solid #fff;
+}
+.mob-menu {
+  display: flex;
+  cursor: pointer;
+  position: relative;
+}
+.mob-menu svg{
+  font-size: 25px;
+}
+.mob-menu-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+.mob-menu-icon:hover{
+  background-color: #192035;
+  border-radius: 30px;
+}
+.mob-menu-tray{
+  position: absolute;
+  top: 54px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-image: linear-gradient(150deg, #FFFFFF, #FFFFFF00, #FFFFFFFC) 1;
+  background-color: #192035; 
+  border-radius: 16px;
+  width: 130px;
+  padding: 10px;
+}
+.mob-menu-tray::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px; 
+  padding: 1px; 
+  background:linear-gradient(150deg, #cfcfcf, #ffffff3e, #c1c1c1fc); 
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude; 
+}
+.mob-menu-tray a{
+  padding: 5px 10px;
+  width: 100%;
+  margin: 0;
+  border-radius: 20px;
+}
+.mob-menu-tray a:hover{
+  background-color: #353c4f;
+}
+
+
+@media only screen and (min-width: 992px) {
+  .web-menu {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-    background-color: transparent;
-    top: 0;
-    z-index: 9999;
-    width: 100%;
   }
-  .navbar-bg {
-    background: linear-gradient(
-      135deg,
-      rgba(28, 28, 28, 0.2) 0%,
-      rgba(0, 0, 0, 0) 100%
-    );
-    backdrop-filter: blur(25px);
+  .mob-menu {
+    display: none;
   }
-  .navbar a {
-    margin: 0 20px;
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  .header-title {
-    font-family: "Inconsolata", monospace;
-    font-size: 30px;
-    font-weight: 800;
-    color: #44c9b0;
-    margin: 0 0 0 35px;
-    letter-spacing: 1px;
-  }
-  .header-title span {
-    font-family: "Inconsolata", monospace;
-    color: #ffffff;
-  }
-  
+}
