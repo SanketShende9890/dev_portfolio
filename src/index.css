@@ -1,8 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600;700;800;900&family=Inter:wght@200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=MuseoModerno:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Titillium+Web:wght@200;300;400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Great+Vibes&family=Inconsolata:wght@400;500;600;700;800;900&family=Inter:wght@200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=MuseoModerno:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Titillium+Web:wght@200;300;400;600;700;900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base{
+  html {
+    font-family: "Poppins", sans-serif;
+  }
+}
 
 body,
 * {
@@ -10,6 +15,9 @@ body,
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #fff;
+  /* color: #fff; */
   position: relative;
+}
+body{
+  background-color: #000218;
 }

@@ -8,39 +8,52 @@ import cssIcon from "../assets/css_icon.png";
 import jsIcon from "../assets/js_icon.png";
 import reactIcon from "../assets/react_icon.png";
 import sassIcon from "../assets/sass_icon.png";
-import namasteEmoji from "../assets/namaste_emoji.png";
 
 const Hero = () => {
-  const [activeStateIndex, setActiveStateIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveStateIndex((prevIndex) => (prevIndex + 1) % 3);
-    }, 2000); // 2 seconds
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
-
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
+  const iconList = [
+    {
+      id: 0,
+      src: htmlIcon,
+    },
+    {
+      id: 1,
+      src: cssIcon,
+    },
+    {
+      id: 2,
+      src: jsIcon,
+    },
+    {
+      id: 3,
+      src: reactIcon,
+    },
+    {
+      id: 4,
+      src: sassIcon,
+    },
+  ];
   return (
-    <section className="hero-section  container">
-      <section style={{padding: '100px 0'}} className="px-3 bg-transparent lg:py-10">
-  <div className="grid lg:grid-cols-2 items-center justify-items-center gap-5">
-    <div className="order-2 lg:order-1 flex flex-col justify-center items-center">
-      {/* <p className="text-4xl font-bold md:text-7xl text-orange-600">25% OFF</p> */}
-      <h1 className="text-4xl font-bold md:text-7xl">FRONT-END REACT DEVELOPER</h1>
-      <span>Namaste!</span>
-      <p className="mt-2 text-sm md:text-lg">I am Sanket Shende. A passionate Front End React Developer based in Nagpur, India.</p>
-    </div>
-    <div className="order-1 lg:order-2">
-      <img width={170} className=" w-100 object-cover" src={profile} alt="profile"/>
-    </div>
-  </div>
-</section>
+    <section className="hero-section text-white py-20 mx-auto flex flex-col items-center container">
+      <h1 className="text-cta-color text-5xl font-medium mt-10">
+        Sanket Shende
+      </h1>
+      <p className="font-medium mt-2 text-1xl">Developer & designer</p>
+      <img className="mt-10" width={175} src={profile} alt="my profile" />
+      <div className="flex items-center justify-center mt-10">
+        <div className="mr-5">Tech Stack</div>
+        <div className="flex items-center justify-center">
+          {
+            iconList.map((items,index)=>(
+              <img width={30} className="mx-2" src={items.src} alt="htmlIcon" />
+
+            ))
+          }
+          {/* <img src={cssIcon} alt="cssIcon" />
+          <img src={jsIcon} alt="jsIcon" />
+          <img src={reactIcon} alt="reactIcon" />
+          <img src={sassIcon} alt="sassIcon" /> */}
+        </div>
+      </div>
 
       {/* <div className="row">
         <div
@@ -105,11 +118,6 @@ const Hero = () => {
           </div>
         </div>
       </div> */}
-
-      
-
-
-      
     </section>
   );
 };

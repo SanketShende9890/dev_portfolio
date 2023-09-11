@@ -1,37 +1,27 @@
-import "./App.css";
+import React from "react";
+import './App.css';
 import Navbar from "./Components/Navbar";
-import Main from "./Components/Main";
 import Hero from "./Components/Hero";
-import About from "./Components/About.js";
-// import Project from "./Components/Project.js";
-// import Contact from "./Components/Contact.js";
-// import Footer from "./Components/Footer.js";
-// import Main from "./components/Main";
-
+import About from "./Components/About";
+import Blog from "./Components/Blog";
+import Contact from "./Components/Contact";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
     <>
-      <header>
-        <Navbar />
+      <header >
+      <Navbar/>
       </header>
-      <main className="hero-bg-gradient">
-      {/* <Main/> */}
-        <Hero />
-        {/* <Project />
-        <Contact /> */}
-        {/* <div className="first-glow"></div>
-        <div className="second-glow"></div>
-        <div className="third-glow"></div>
-        <div className="fourth-glow"></div>
-        <div className="fifth-glow"></div> */}
-        
-
-      </main>
-      <About />
+      <section className="hero-bg">
+        <Hero/>
+      </section>
+      <About/>
       <footer>
-        {/* <Footer /> */}
+        <Footer/>
       </footer>
+      
+    
     </>
   );
 }
