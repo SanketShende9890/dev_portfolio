@@ -34,9 +34,7 @@ const Hero = () => {
   ];
   return (
     <section className="hero-section text-white py-20 mx-auto flex flex-col items-center container">
-      <h1 className="text-cta-color text-5xl font-medium mt-10">
-        Sanket Shende
-      </h1>
+      <h1 className="text-cta-color text-5xl font-medium mt-10 text-center">Sanket Shende</h1>
       <p className="font-medium mt-2 text-1xl">Developer & designer</p>
       <img className="mt-10" width={175} src={profile} alt="my profile" />
       <div className="flex items-center justify-center mt-10">
