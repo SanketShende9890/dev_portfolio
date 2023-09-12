@@ -1,6 +1,5 @@
 import React from "react";
 import namasteEmoji from "../assets/namaste_emoji.png";
-import Heading from "../Components/Heading";
 import Profile from "../assets/Frame.jpg";
 
 const About = () => {
@@ -9,7 +8,6 @@ const About = () => {
       className="max-w-4xl py-10 px-6 text-white mx-auto"
       style={{ position: "relative" }}
     >
-      <Heading heading={"About"} />
       <div className="relative overflow-hidden shadow-xl rounded-2xl flex bg-slate-800 h-[31.625rem] max-h-[60vh] sm:max-h-[none] lg:h-[34.6875rem] xl:h-[31.625rem] dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10 !h-auto max-h-[none] p-8">
         <div className="flex flex-col md:flex-row">
           <img
@@ -18,7 +16,7 @@ const About = () => {
             alt=""
           />
           <div className="flex flex-col justify-start px-0 md:px-10 pt-8 md:py-6 leading-normal w-full md:w-1/2">
-            <h5 className="mb-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white flex items-center">
+            <h5 className="mb-3 text-3xl font-medium tracking-tight text-gray-900 dark:text-white flex items-center">
               Namaste!
               <img className="ml-3" width={30} src={namasteEmoji} alt="🙏" />
             </h5>
