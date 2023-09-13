@@ -58,7 +58,7 @@ const Navbar = () => {
   };
   const handleDownloadPDF = () => {
     // Replace 'your-pdf-file.pdf' with the actual path to your PDF file
-    const pdfFilePath = 'https://docs.google.com/document/d/1Ygk8OgjaZELT7OXnQ5JJFBAatd1OZWJv0aIx5bfKzqk/edit';
+    const pdfFilePath = '../assets/Sanket_Reactjs_Resume.pdf';
     const link = document.createElement('a');
 
     link.href = pdfFilePath;
