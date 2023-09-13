@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState, useEffect} from "react";
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
@@ -11,20 +11,41 @@ import Heading from "./Components/Common/Heading";
 import Test from "./Components/Test";
 
 function App() {
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+ 
+
  
   return (
     <>
-      <header>
+      <header className={`${scrolling ? 'nav-bg': ''} fixed object-center left-1/2 transform -translate-x-1/2 w-full h-20`} >
         <Navbar />
       </header>
-      <section className="hero-bg ">
+      <section className="hero-bg home-section">
         <Hero />
       </section>
-      <section>
+      <div>
+
+      <section className="about-section">
         <Heading heading={"About me"} />
         <About />
       </section>
-      <section >
+      <section className="project-section">
         <Heading heading={"Projects"} />
         <Slate
           title={"EV Rental"}
@@ -67,10 +88,19 @@ function App() {
           code={"https://github.com/SanketShende9890/dev_portfolio"}
         />
       </section>
-      <section>
+      <section className="blog-section">
+        <Heading heading={"Blog"} />
+        <Contact/>
+      </section>
+      <section className="contact-section">
         <Heading heading={"Contact"} />
         <Contact/>
       </section>
+      <div className="grad-1"></div>
+      <div className="grad-2"></div>
+
+      </div>
+
 
       <footer>
         <Footer />

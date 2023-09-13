@@ -6,29 +6,94 @@ import { FiDownload } from "react-icons/fi";
 
 const Navbar = () => {
   const [navMenu, setNavMenu] = useState(false);
+  const scrollToHome = () => {
+    const homeSection = document.querySelector(".home-section");
+    if (homeSection) {
+      const yOffset = -60;
+      const y =
+        homeSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
+  const scrollToAbout = () => {
+    const aboutSection = document.querySelector(".about-section");
+    if (aboutSection) {
+      const yOffset = -60;
+      const y =
+        aboutSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
+  const scrollToProject = () => {
+    const projectSection = document.querySelector(".project-section");
+    if (projectSection) {
+      const yOffset = -60;
+      const y =
+        projectSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
+  const scrollToBlog = () => {
+    const blogSection = document.querySelector(".blog-section");
+    if (blogSection) {
+      const yOffset = -60;
+      const y =
+        blogSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
+  const scrollToContact = () => {
+    const contactSection = document.querySelector(".contact-section");
+    if (contactSection) {
+      const yOffset = -60;
+      const y =
+        contactSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
+  const handleDownloadPDF = () => {
+    // Replace 'your-pdf-file.pdf' with the actual path to your PDF file
+    const pdfFilePath = 'https://docs.google.com/document/d/1Ygk8OgjaZELT7OXnQ5JJFBAatd1OZWJv0aIx5bfKzqk/edit';
+    const link = document.createElement('a');
+
+    link.href = pdfFilePath;
+    link.target = '_blank';
+    link.download = 'Sanket_Reactjs_Resume.pdf'; 
+
+    link.click();
+  };
   const navbarList = [
     {
       id: 1,
       link: "about",
+      scrollFunc: scrollToAbout,
     },
     {
       id: 2,
       link: "projects",
+      scrollFunc: scrollToProject,
     },
     {
       id: 3,
       link: "blog",
+      scrollFunc: scrollToBlog,
     },
     {
       id: 1,
       link: "contact",
+      scrollFunc: scrollToContact,
     },
   ];
 
   return (
     <nav className="flex justify-between items-center w-full h-20 bg-black fixed object-center left-1/2 transform -translate-x-1/2 px-4 max-w-6xl mx-auto">
       <div className="flex items-center w-full">
-        <h1 className="text-4xl font-signature ml-2 mr-14 cursor-pointer text-cta-color">
+        <h1 onClick={scrollToHome} className="text-4xl font-signature ml-2 mr-14 cursor-pointer text-cta-color">
           Sanket
         </h1>
 
@@ -37,13 +102,14 @@ const Navbar = () => {
             {navbarList.map((items, index) => (
               <li
                 key={index}
+                onClick={items.scrollFunc}
                 className="text-gray px-4 cursor-pointer capitalize font-medium  hover:scale-105 duration-200 hover:text-white"
               >
                 {items.link}
               </li>
             ))}
           </ul>
-          <button className="flex items-center font-medium py-2 px-4 rounded bg-cta-color hover:bg-cta-hover duration-200">
+          <button onClick={handleDownloadPDF} className="flex items-center font-medium py-2 px-4 rounded bg-cta-color hover:bg-cta-hover duration-200">
             <FiDownload className="mr-3" />
             Resume
           </button>

@@ -8,6 +8,7 @@ import cssIcon from "../assets/css_icon.png";
 import jsIcon from "../assets/js_icon.png";
 import reactIcon from "../assets/react_icon.png";
 import sassIcon from "../assets/sass_icon.png";
+import bgVid from '../assets/bg-grad-vid.mp4';
 
 const Hero = () => {
   useEffect(() => {

@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import '../styles/Main.css';
 import { gsap } from "gsap";
 import vid1 from '../assets/vid_1.mp4';
@@ -11,11 +11,15 @@ import namasteEmoji from "../assets/namaste_emoji.png"
 
 const Main = () => {
     let vidType = "video/mp4"
+    useEffect(()=>{
+      let vid = document.getElementById('vid');
+      vid.playbackRate = 10
+    },[])
   return (
     <div className="section">
 
     <div className="video-container">
-      <video src={vid3} type={vidType} autoPlay loop muted></video>
+      <video id="vid" src={vid3} playbackRate={20}  type={vidType} autoPlay loop muted></video>
       <div className="overlay"></div>
       <div className="text">
         <h1>Namaste! My name is</h1>

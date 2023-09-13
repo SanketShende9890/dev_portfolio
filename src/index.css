@@ -19,5 +19,6 @@ body,
   position: relative;
 }
 body{
+  overflow-x: hidden;
   background-color: #000218;
 }
