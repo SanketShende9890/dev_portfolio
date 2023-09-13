@@ -1,11 +1,30 @@
-import React from "react";
+import React,{useEffect} from "react";
 import namasteEmoji from "../assets/namaste_emoji.png";
 import Profile from "../assets/Frame.jpg";
 
 const About = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fadein');
+        }
+        //  else {
+        //   entry.target.classList.remove('fadein');
+        // }
+      });
+    });
+
+    const hiddenElements = document.querySelectorAll('.fadeout');
+    hiddenElements.forEach((element) => observer.observe(element));
+
+    return () => {
+      hiddenElements.forEach((element) => observer.unobserve(element));
+    };
+  }, []);
   return (
     <section
-      className="max-w-4xl py-10 px-6 text-white mx-auto"
+      className="fadeout max-w-4xl py-10 px-6 text-white mx-auto"
       style={{ position: "relative" }}
     >
       <div className="relative overflow-hidden shadow-xl rounded-2xl flex bg-slate-800 h-[31.625rem] max-h-[60vh] sm:max-h-[none] lg:h-[34.6875rem] xl:h-[31.625rem] dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10 !h-auto max-h-[none] p-8">

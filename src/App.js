@@ -8,21 +8,23 @@ import Contact from "./Components/Contact";
 import Footer from "./Components/Common/Footer";
 import Slate from "./Components/Common/Slate";
 import Heading from "./Components/Common/Heading";
+import Test from "./Components/Test";
 
 function App() {
+ 
   return (
     <>
       <header>
         <Navbar />
       </header>
-      <section className="hero-bg">
+      <section className="hero-bg ">
         <Hero />
       </section>
       <section>
         <Heading heading={"About me"} />
         <About />
       </section>
-      <section>
+      <section >
         <Heading heading={"Projects"} />
         <Slate
           title={"EV Rental"}

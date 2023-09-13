@@ -144,3 +144,29 @@ header{
   .text-area textarea.input-focus {
     border-color: var(--primary);
   }
+
+
+
+  /* Scrolll animation */
+
+  .products {
+    background-color:#999999;
+    padding:20px;
+  }
+  .product {
+    background-color:#111111;
+    padding:20px;
+    color:#fff;
+    margin-bottom:20px;
+    height:400px;
+  }
+  .fadeout {
+    opacity: 0;
+    transition: all 2s;
+    transform: translate(0, 100px);
+  }
+  
+  .fadein {
+    opacity: 1;
+    transform: translate(0, 0);
+  }

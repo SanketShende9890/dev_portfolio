@@ -10,6 +10,25 @@ import reactIcon from "../assets/react_icon.png";
 import sassIcon from "../assets/sass_icon.png";
 
 const Hero = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fadein');
+        }
+        //  else {
+        //   entry.target.classList.remove('fadein');
+        // }
+      });
+    });
+
+    const hiddenElements = document.querySelectorAll('.fadeout');
+    hiddenElements.forEach((element) => observer.observe(element));
+
+    return () => {
+      hiddenElements.forEach((element) => observer.unobserve(element));
+    };
+  }, []);
   const iconList = [
     {
       id: 0,
@@ -33,7 +52,7 @@ const Hero = () => {
     },
   ];
   return (
-    <section className="hero-section text-white py-20 mx-auto flex flex-col items-center container">
+    <section className="fadeout hero-section h-screen text-white py-20 mx-auto flex flex-col justify-center items-center container">
       <h1 className="text-cta-color text-5xl font-medium mt-10 text-center">
         Front-End Developer
       </h1>
