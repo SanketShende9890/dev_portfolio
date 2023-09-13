@@ -8,7 +8,7 @@ import Contact from "./Components/Contact";
 import Footer from "./Components/Common/Footer";
 import Slate from "./Components/Common/Slate";
 import Heading from "./Components/Common/Heading";
-import Test from "./Components/Test";
+// import Test from "./Components/Test";
 
 function App() {
   const [scrolling, setScrolling] = useState(false);
@@ -90,7 +90,7 @@ function App() {
       </section>
       <section className="blog-section">
         <Heading heading={"Blog"} />
-        <Contact/>
+        <Blog/>
       </section>
       <section className="contact-section">
         <Heading heading={"Contact"} />
@@ -98,6 +98,16 @@ function App() {
       </section>
       <div className="grad-1"></div>
       <div className="grad-2"></div>
+      <div className="grad-3"></div>
+      <div className="grad-4"></div>
+      <div className="grad-5"></div>
+      <div className="grad-6"></div>
+      <div className="grad-7"></div>
+
+
+
+
+
 
       </div>
 

@@ -9,7 +9,17 @@ header {
   background-size: cover;
   width: 100%;
 }
-.nav-bg{
+.hero-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2); 
+  z-index: -1; 
+}
+.nav-bg {
   background-color: #151c35;
 }
 :root {
@@ -194,6 +204,71 @@ header {
   filter: blur(295px);
   transform: rotate(60deg);
 }
+.grad-3 {
+  position: absolute;
+  z-index: 0;
+  right: -340px;
+  top: 590px;
+  width: 396px;
+  height: 800px;
+  flex-shrink: 0;
+  border-radius: 396px;
+  background: rgba(255, 245, 160, 0.4);
+  filter: blur(295px);
+  transform: rotate(90deg);
+}
+.grad-4 {
+  position: absolute;
+  z-index: 0;
+  left: 0px;
+  top: 1420px;
+  width: 596px;
+  height: 150px;
+  flex-shrink: 0;
+  border-radius: 396px;
+  background: rgba(220, 76, 136, 0.7);
+  filter: blur(295px);
+  transform: rotate(-30deg);
+}
+.grad-5 {
+  position: absolute;
+  z-index: 0;
+  right: 140px;
+  top: 1920px;
+  width: 736px;
+  height: 150px;
+  flex-shrink: 0;
+  border-radius: 396px;
+  background: rgba(37, 124, 190, 0.7);
+  filter: blur(295px);
+  transform: rotate(-135deg);
+}
+.grad-6 {
+  position: absolute;
+  z-index: 0;
+  right: 640px;
+  bottom: 80px;
+  width: 600px;
+  height: 396px;
+  border-radius: 396px;
+  background: rgba(194, 65, 255, 0.15);
+  filter: blur(295px);
+  transform: rotate(145deg);
+}
+.grad-7 {
+  position: absolute;
+  z-index: 0;
+  right: 320px;
+  bottom: 100px;
+  width: 340px;
+  height: 566px;
+  border-radius: 396px;
+  background: rgba(251, 140, 120, 0.2);
+  filter: blur(295px);
+  transform: rotate(35deg);
+}
+
+
 section {
   position: relative;
   z-index: 3;

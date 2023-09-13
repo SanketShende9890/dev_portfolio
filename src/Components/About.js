@@ -1,6 +1,6 @@
 import React,{useEffect} from "react";
 import namasteEmoji from "../assets/namaste_emoji.png";
-import Profile from "../assets/Frame.jpg";
+import slateBg from "../assets/slate-about.jpg";
 
 const About = () => {
   useEffect(() => {
@@ -31,8 +31,8 @@ const About = () => {
         <div className="flex flex-col md:flex-row">
           <img
             className="object-cover w-full md:w-1/2 rounded-3xl h-72 md:h-72 "
-            src={Profile}
-            alt=""
+            src={slateBg}
+            alt="slate-img"
           />
           <div className="flex flex-col justify-start px-0 md:px-10 pt-8 md:py-6 leading-normal w-full md:w-1/2">
             <h5 className="mb-3 text-3xl font-medium tracking-tight text-gray-900 dark:text-white flex items-center">
