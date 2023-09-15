@@ -8,6 +8,7 @@ import Contact from "./Components/Contact";
 import Footer from "./Components/Common/Footer";
 import Slate from "./Components/Common/Slate";
 import Heading from "./Components/Common/Heading";
+import voltRidePreview from "./assets/voltride-preview.jpg"
 
 
 function App() {
@@ -71,14 +72,15 @@ function App() {
       <section  className="project-section">
         <Heading heading={"Projects"} />
         <Slate
-          title={"EV Rental"}
+          title={"VoltRide"}
           description={
             "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the."
           }
           live={
-            "https://dribbble.com/shots/21971060-Design-Agency-Landing-Page"
+            "https://voltride.vercel.app/"
           }
-          code={"https://github.com/SanketShende9890/dev_portfolio"}
+          code={"https://github.com/SanketShende9890/VoltRide"}
+          preview={voltRidePreview}
         />
         <Slate
           title={"CoinBCX"}

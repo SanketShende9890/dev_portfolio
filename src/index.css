@@ -20,5 +20,6 @@ body,
 }
 body{
   overflow-x: hidden;
-  background-color: #000218;
+  /* background-color: #000218; */
+  background-color:#101d2f;
 }

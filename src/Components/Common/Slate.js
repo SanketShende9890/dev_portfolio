@@ -1,9 +1,8 @@
 import React from 'react';
-import Profile from "../../assets/Frame.jpg";
 import {AiFillGithub} from 'react-icons/ai'
 
 
-const Slate = ({title,description,code,live}) => {
+const Slate = ({title,description,code,live,preview}) => {
   return (
     <section
     className="max-w-4xl py-10 px-6 text-white mx-auto fadeout"
@@ -11,11 +10,11 @@ const Slate = ({title,description,code,live}) => {
   >
     <div className="relative overflow-hidden shadow-xl rounded-2xl flex bg-slate-800 h-[31.625rem] max-h-[60vh] sm:max-h-[none] lg:h-[34.6875rem] xl:h-[31.625rem] dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10 !h-auto max-h-[none] p-8">
       <div className="flex flex-col md:flex-row w-full">
-        <img
+          <img
           className="object-cover w-full md:w-1/2 rounded-3xl h-72 md:h-72 "
-          src={Profile}
-          alt=""
-        />
+          src={preview}
+          alt="No preview available"
+          /> 
         <div className="flex flex-col justify-center items-center px-0 md:px-10 pt-8 md:py-6 leading-normal w-full md:w-1/2">
           <div className='flex flex-col justify-center items-center'>
 
