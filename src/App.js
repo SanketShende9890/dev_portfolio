@@ -11,21 +11,44 @@ import Heading from "./Components/Common/Heading";
 
 
 function App() {
-  const [scrolling, setScrolling] = useState(false);
+  // const [scrolling, setScrolling] = useState(false);
 
+
+  // Navbar scrolling bg
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY > 100) {
+  //       setScrolling(true);
+  //     } else {
+  //       setScrolling(false);
+  //     }
+  //   };
+
+  //   window.addEventListener('scroll', handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
+
+  // Fade in animation
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setScrolling(true);
-      } else {
-        setScrolling(false);
-      }
-    };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("fadein");
+        }
+        else{
+          entry.target.classList.remove("fadein");
 
-    window.addEventListener('scroll', handleScroll);
+        }
+      });
+    });
+    const hiddenElements = document.querySelectorAll(".fadeout");
+    hiddenElements.forEach((element) => observer.observe(element));
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      hiddenElements.forEach((element) => observer.unobserve(element));
     };
   }, []);
  
@@ -33,13 +56,13 @@ function App() {
  
   return (
     <>
-      <header className={`${scrolling ? 'nav-bg': ''} fixed w-full top-0 left-1/2 transform -translate-x-1/2  h-20`} >
+      {/* <header className={`${scrolling ? 'nav-bg': ''} fixed w-full top-0 left-1/2 transform -translate-x-1/2  h-20`} > */}
         <Navbar />
-      </header>
+      {/* </header> */}
       <section className="hero-bg home-section">
         <Hero />
       </section>
-      <div style={{overflowX: 'hidden'}}>
+      <div style={{overflow: 'hidden'}}>
 
       <section  className="about-section">
         <Heading heading={"About me"} />

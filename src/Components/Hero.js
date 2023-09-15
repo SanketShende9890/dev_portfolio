@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React from "react";
 import "../styles/Hero.css";
 import profile from "../assets/profile.png";
 import htmlIcon from "../assets/html_icon.png";
@@ -11,25 +9,7 @@ import sassIcon from "../assets/sass_icon.png";
 import tailwindIcon from "../assets/tailwind_icon.png"
 
 const Hero = () => {
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("fadein");
-        }
-        //  else {
-        //   entry.target.classList.remove('fadein');
-        // }
-      });
-    });
-
-    const hiddenElements = document.querySelectorAll(".fadeout");
-    hiddenElements.forEach((element) => observer.observe(element));
-
-    return () => {
-      hiddenElements.forEach((element) => observer.unobserve(element));
-    };
-  }, []);
+  
   const iconList = [
     {
       id: 0,
@@ -55,6 +35,15 @@ const Hero = () => {
       id: 5,
       src: sassIcon,
     },
+    {
+      id: 5,
+      src: sassIcon,
+    },
+    {
+      id: 5,
+      src: sassIcon,
+    },
+    
   ];
   return (
     <section className="fadeout hero-section h-screen text-white py-20 mx-auto flex flex-col justify-center items-center container">
@@ -64,10 +53,10 @@ const Hero = () => {
       <p className="font-medium mt-2 text-2xl">Developer & designer</p>
       <img className="mt-10" width={220} src={profile} alt="my profile" />
       <div className="flex flex-col items-center justify-center mt-10">
-        <div className="mr-5 text-xl font-bold mb-3">Tech Stack</div>
-        <div className="flex items-center justify-center ">
+        <div className="text-xl font-bold mb-3">Tech Stack</div>
+        <div className="flex flex-wrap items-center justify-center w-full md:w-1/2">
           {iconList.map((items, index) => (
-            <div className="mx-2 cursor-pointer h-14 w-14 p-2 hover:translate-y-5 duration-300 flex justify-center items-center rounded-2xl bg-slate-800  dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10">
+            <div style={{border: '1px solid rgba(225,225,225,0.2)'}} className="mx-4 my-3 cursor-pointer h-14 w-14 p-2 hover:translate-y-5 duration-300 flex justify-center items-center rounded-2xl bg-slate-800  dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset ">
               <img width={30} src={items.src} alt="htmlIcon" />
             </div>
           ))}

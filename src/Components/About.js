@@ -1,27 +1,8 @@
-import React,{useEffect} from "react";
+import React from "react";
 import namasteEmoji from "../assets/namaste_emoji.png";
 import slateBg from "../assets/slate-about.jpg";
 
 const About = () => {
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('fadein');
-        }
-        //  else {
-        //   entry.target.classList.remove('fadein');
-        // }
-      });
-    });
-
-    const hiddenElements = document.querySelectorAll('.fadeout');
-    hiddenElements.forEach((element) => observer.observe(element));
-
-    return () => {
-      hiddenElements.forEach((element) => observer.unobserve(element));
-    };
-  }, []);
   return (
     <section
       className="fadeout max-w-4xl py-10 px-6 text-white mx-auto"

@@ -1,6 +1,6 @@
 header {
   position: relative;
-  z-index: 20;overflow-x: hidden;
+  z-index: 20;
 }
 
 .hero-bg {
@@ -8,6 +8,10 @@ header {
   background-position: bottom center;
   background-size: cover;
   width: 100%;
+}
+.hero-section{
+  margin-top: 50px;
+
 }
 .home-section{
   overflow-x: hidden;
@@ -30,7 +34,9 @@ header {
   --secondary: #124;
   --accent: #e72;
 }
-
+.about-section{
+  overflow-y: hidden;
+}
 .contact-form-container {
   display: flex;
   /* min-height: 100vh; */
@@ -173,7 +179,7 @@ header {
 }
 .fadeout {
   opacity: 0;
-  transition: all 2s;
+  transition: all 1.5s;
   transform: translate(0, 100px);
 }
 
@@ -191,7 +197,7 @@ header {
   width: 600px;
   height: 396px;
   border-radius: 396px;
-  background: rgba(194, 65, 255, 0.25);
+  background: rgba(194, 65, 255, 0.1);
   filter: blur(295px);
 }
 .grad-2 {
@@ -203,7 +209,7 @@ header {
   height: 800px;
   flex-shrink: 0;
   border-radius: 50%;
-  background: rgba(251, 140, 120, 0.3);
+  background: rgba(251, 140, 120, 0.2);
   filter: blur(295px);
   transform: rotate(60deg);
 }
@@ -216,7 +222,7 @@ header {
   height: 800px;
   flex-shrink: 0;
   border-radius: 396px;
-  background: rgba(255, 245, 160, 0.4);
+  background: rgba(255, 245, 160, 0.2);
   filter: blur(295px);
   transform: rotate(90deg);
 }
@@ -229,7 +235,7 @@ header {
   height: 250px;
   flex-shrink: 0;
   border-radius: 50%;
-  background: rgba(220, 76, 136, 0.4);
+  background: rgba(220, 76, 136, 0.2);
   filter: blur(295px);
   transform: rotate(-50deg);
 }
@@ -242,7 +248,7 @@ header {
   height: 150px;
   flex-shrink: 0;
   border-radius: 396px;
-  background: rgba(37, 124, 190, 0.5);
+  background: rgba(37, 124, 190, 0.3);
   filter: blur(295px);
   transform: rotate(-135deg);
 }
