@@ -8,7 +8,7 @@ import Contact from "./Components/Contact";
 import Footer from "./Components/Common/Footer";
 import Slate from "./Components/Common/Slate";
 import Heading from "./Components/Common/Heading";
-// import Test from "./Components/Test";
+
 
 function App() {
   const [scrolling, setScrolling] = useState(false);
@@ -33,19 +33,19 @@ function App() {
  
   return (
     <>
-      <header className={`${scrolling ? 'nav-bg': ''} fixed object-center left-1/2 transform -translate-x-1/2 w-full h-20`} >
+      <header className={`${scrolling ? 'nav-bg': ''} fixed w-full top-0 left-1/2 transform -translate-x-1/2  h-20`} >
         <Navbar />
       </header>
       <section className="hero-bg home-section">
         <Hero />
       </section>
-      <div>
+      <div style={{overflowX: 'hidden'}}>
 
-      <section className="about-section">
+      <section  className="about-section">
         <Heading heading={"About me"} />
         <About />
       </section>
-      <section className="project-section">
+      <section  className="project-section">
         <Heading heading={"Projects"} />
         <Slate
           title={"EV Rental"}
@@ -95,6 +95,8 @@ function App() {
       <section className="contact-section">
         <Heading heading={"Contact"} />
         <Contact/>
+      </section>
+      <section>
       </section>
       <div className="grad-1"></div>
       <div className="grad-2"></div>
