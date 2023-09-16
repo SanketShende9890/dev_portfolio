@@ -59,7 +59,7 @@ const Main = () => {
     link.click();
   };
   return (
-    <div className="section home-section">
+    <div className="section">
       <div className="video-container">
         <video id="vid" src={bgVid} type={vidType} autoPlay loop muted></video>
         <div className="overlay"></div>
@@ -139,6 +139,7 @@ const Main = () => {
           </section>
         </div>
       </div>
+      <div className="mask-grad"></div>
     </div>
   );
 };

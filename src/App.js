@@ -58,7 +58,7 @@ function App() {
       <section className="home-section">
         <Main />
       </section>
-      <div style={{ overflow: "hidden" }}>
+      <section>
         <section className="about-section">
           <Heading heading={"About me"} />
           <About />
@@ -114,14 +114,14 @@ function App() {
           <Contact />
         </section>
         <section></section>
-        <div className="grad-1"></div>
+        {/* <div className="grad-1"></div> */}
         <div className="grad-2"></div>
         <div className="grad-3"></div>
         <div className="grad-4"></div>
         <div className="grad-5"></div>
         <div className="grad-6"></div>
         <div className="grad-7"></div>
-      </div>
+      </section>
 
       <footer>
         <Footer />
