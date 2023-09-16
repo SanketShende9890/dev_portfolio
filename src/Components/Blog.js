@@ -15,7 +15,7 @@ const Blog = () => {
     transform: translate(0, 0);
   }`;
   return (
-    <section className="max-w-4xl py-10 px-6 text-gray mx-auto relative">
+    <section className="max-w-4xl py-10 px-2 text-gray mx-auto relative">
       <Reveal keyframes={customLeftAnimation}>
         <Fade delay={1e1} cascade damping={1e-1}>
           <div

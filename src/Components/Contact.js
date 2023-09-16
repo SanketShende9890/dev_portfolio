@@ -160,7 +160,7 @@ const Contact = () => {
   }`;
   return (
     <section
-      className="max-w-4xl py-10 px-6 text-white mx-auto "
+      className="max-w-4xl py-10 px-2 text-white mx-auto "
       style={{ position: "relative" }}
     >
       <Reveal keyframes={customLeftAnimation}>

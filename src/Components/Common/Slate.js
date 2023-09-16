@@ -18,7 +18,7 @@ const Slate = ({title,description,code,live,preview}) => {
   }`;
   return (
     <section
-    className="max-w-4xl py-10 px-6 text-gray mx-auto relative">
+    className="max-w-4xl py-10 px-2 text-gray mx-auto relative">
     <Reveal keyframes={customLeftAnimation}>
         <Fade delay={1e1} cascade damping={1e-1}>
     <div style={{backgroundColor: '#fff'}} className="relative overflow-hidden shadow-xl rounded-2xl flex bg-slate-800 h-[31.625rem] max-h-[60vh] sm:max-h-[none] lg:h-[34.6875rem] xl:h-[31.625rem] dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10 !h-auto max-h-[none] p-8">

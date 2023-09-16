@@ -18,6 +18,6 @@ body,
   position: relative;
 }
 body{
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   background-color:#FAF9F6;
 }
