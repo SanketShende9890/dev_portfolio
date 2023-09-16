@@ -118,7 +118,7 @@ const Navbar = () => {
   // Navbar scrolling bg
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 80) {
         setScrolling(true);
       } else {
         setScrolling(false);
