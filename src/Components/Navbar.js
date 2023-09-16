@@ -136,13 +136,11 @@ const Navbar = () => {
     <header
       className={`${
         scrolling ? "nav-bg" : ""
-      } fixed w-full top-0 left-1/2 transform -translate-x-1/2 navbar h-24`}
+      } fixed w-full top-0 left-1/2 transform -translate-x-1/2 navbar h-20`}
     >
       <Fade delay={2e2} cascade damping={1e-1}>
         <nav
-          className={`${
-            navMenu ? "h-20" : " h-20 "
-          } flex justify-between items-center w-full bg-black fixed object-center left-1/2 transform -translate-x-1/2 px-4 max-w-6xl mx-auto`}
+          className={`flex justify-between items-center w-full h-20 bg-black fixed object-center left-1/2 transform -translate-x-1/2 px-4 max-w-6xl mx-auto`}
         >
           <Fade>
             <h1
