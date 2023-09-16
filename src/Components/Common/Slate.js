@@ -5,7 +5,7 @@ import {AiFillGithub} from 'react-icons/ai'
 const Slate = ({title,description,code,live,preview}) => {
   return (
     <section
-    className="max-w-4xl py-10 px-6 text-white mx-auto fadeout"
+    className="max-w-4xl py-10 px-6 text-white mx-auto "
     style={{ position: "relative" }}
   >
     <div className="relative overflow-hidden shadow-xl rounded-2xl flex bg-slate-800 h-[31.625rem] max-h-[60vh] sm:max-h-[none] lg:h-[34.6875rem] xl:h-[31.625rem] dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10 !h-auto max-h-[none] p-8">

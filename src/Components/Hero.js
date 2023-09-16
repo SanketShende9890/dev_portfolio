@@ -46,7 +46,7 @@ const Hero = () => {
     
   ];
   return (
-    <section className="fadeout hero-section h-screen text-white py-20 mx-auto flex flex-col justify-center items-center container">
+    <section className=" hero-section h-screen text-white py-20 mx-auto flex flex-col justify-center items-center container">
       <h1 className="text-cta-color text-6xl font-medium mt-10 text-center">
         Front-End Developer
       </h1>

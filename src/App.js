@@ -33,25 +33,25 @@ function App() {
   // }, []);
 
   // Fade in animation
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("fadein");
-        }
-        else{
-          entry.target.classList.remove("fadein");
+  // useEffect(() => {
+  //   const observer = new IntersectionObserver((entries) => {
+  //     entries.forEach((entry) => {
+  //       if (entry.isIntersecting) {
+  //         entry.target.classList.add("fadein");
+  //       }
+  //       else{
+  //         entry.target.classList.remove("fadein");
 
-        }
-      });
-    });
-    const hiddenElements = document.querySelectorAll(".fadeout");
-    hiddenElements.forEach((element) => observer.observe(element));
+  //       }
+  //     });
+  //   });
+  //   const hiddenElements = document.querySelectorAll(".");
+  //   hiddenElements.forEach((element) => observer.observe(element));
 
-    return () => {
-      hiddenElements.forEach((element) => observer.unobserve(element));
-    };
-  }, []);
+  //   return () => {
+  //     hiddenElements.forEach((element) => observer.unobserve(element));
+  //   };
+  // }, []);
  
 
  

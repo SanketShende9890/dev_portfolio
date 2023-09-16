@@ -13,7 +13,7 @@ function Test() {
           });
         });
     
-        const hiddenElements = document.querySelectorAll('.fadeout');
+        const hiddenElements = document.querySelectorAll('.');
         hiddenElements.forEach((element) => observer.observe(element));
     
         return () => {
@@ -23,32 +23,32 @@ function Test() {
       }, []);
   return (
     <>
-        <div className="product  fadeout">
+        <div className="product  ">
           <h4>Bandana #1</h4>
           <p>£15</p>
         </div>
 
-        <div className="product  fadeout">
+        <div className="product  ">
           <h4>Bandana #2</h4>
           <p>£15</p>
         </div>
 
-        <div className="product  fadeout">
+        <div className="product  ">
           <h4>Bandana #3</h4>
           <p>£15</p>
         </div>
 
-        <div className="product  fadeout">
+        <div className="product  ">
           <h4>Bandana #4</h4>
           <p>£15</p>
         </div>
 
-        <div className="product  fadeout">
+        <div className="product  ">
           <h4>Bandana #5</h4>
           <p>£15</p>
         </div>
 
-        <div className="product  fadeout">
+        <div className="product  ">
           <h4>Bandana #6</h4>
           <p>£15</p>
         </div>
