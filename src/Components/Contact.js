@@ -1,20 +1,31 @@
-import React,{useState, useEffect} from 'react';
-/** Components */
-const Card = ({ children }) => (
-  <div className="contact-card">
-    {children}
-  </div>
-);
+import React, { useState } from "react";
+import Reveal from "react-awesome-reveal";
+import { keyframes } from "@emotion/react";
+import { Fade } from "react-awesome-reveal";
 
-const Form = ({ children }) => (
-  <form className="contact-form">{children}</form>
-);
+const Card = ({ children }) => <div className="contact-card">{children}</div>;
 
-const TextInput = ({ name, label, value, focus, onChange, onInput, onFocus, onBlur }) => (
+const Form = ({ children }) => <form className="contact-form">{children}</form>;
+
+const TextInput = ({
+  name,
+  label,
+  value,
+  focus,
+  onChange,
+  onInput,
+  onFocus,
+  onBlur,
+}) => (
   <div className="text-input">
-    <label className={(focus || value !== '') ? 'label-focus' : ''} htmlFor={name}>{label}</label>
+    <label
+      className={focus || value !== "" ? "label-focus" : ""}
+      htmlFor={name}
+    >
+      {label}
+    </label>
     <input
-      className={(focus || value !== '') ? 'input-focus' : ''}
+      className={focus || value !== "" ? "input-focus" : ""}
       type="text"
       name={name}
       value={value}
@@ -26,11 +37,25 @@ const TextInput = ({ name, label, value, focus, onChange, onInput, onFocus, onBl
   </div>
 );
 
-const TextArea = ({ name, label, value, focus, onChange, onInput, onFocus, onBlur }) => (
+const TextArea = ({
+  name,
+  label,
+  value,
+  focus,
+  onChange,
+  onInput,
+  onFocus,
+  onBlur,
+}) => (
   <div className="text-area">
-    <label className={(focus || value !== '') ? 'label-focus' : ''} htmlFor={name}>{label}</label>
+    <label
+      className={focus || value !== "" ? "label-focus" : ""}
+      htmlFor={name}
+    >
+      {label}
+    </label>
     <textarea
-      className={(focus || value !== '') ? 'input-focus' : ''}
+      className={focus || value !== "" ? "input-focus" : ""}
       name={name}
       value={value}
       onChange={onChange}
@@ -42,28 +67,27 @@ const TextArea = ({ name, label, value, focus, onChange, onInput, onFocus, onBlu
 );
 
 const Button = ({ children }) => (
-  <button className="contact-button">{children}</button>
+  <button className="btn-grad w-full py-2">{children}</button>
 );
 
 const ContactForm = () => {
-  
   const initialState = {
     name: {
-      name: 'name',
-      label: 'Name',
-      value: '',
+      name: "name",
+      label: "Name",
+      value: "",
       focus: false,
     },
     email: {
-      name: 'email',
-      label: 'Email',
-      value: '',
+      name: "email",
+      label: "Email",
+      value: "",
       focus: false,
     },
     message: {
-      name: 'message',
-      label: 'Message',
-      value: '',
+      name: "message",
+      label: "Message",
+      value: "",
       focus: false,
     },
   };
@@ -96,7 +120,7 @@ const ContactForm = () => {
   return (
     <div className="contact-form-container ">
       <Card>
-        <h1 className='text-2xl'>Let's talk..</h1>
+        <h1 className="text-2xl text-gray">Let's talk..</h1>
         <Form>
           <TextInput
             {...name}
@@ -123,19 +147,31 @@ const ContactForm = () => {
   );
 };
 
-
 const Contact = () => {
+  const customLeftAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translate(0, 100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }`;
   return (
     <section
-    className="max-w-4xl py-10 px-6 text-white mx-auto "
-    style={{ position: "relative" }}
-  >
-    <div className="relative overflow-hidden shadow-xl rounded-2xl flex bg-slate-800 h-[31.625rem] max-h-[60vh] sm:max-h-[none] lg:h-[34.6875rem] xl:h-[31.625rem] dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10 !h-auto max-h-[none] p-8">
-    <ContactForm/>
+      className="max-w-4xl py-10 px-6 text-white mx-auto "
+      style={{ position: "relative" }}
+    >
+      <Reveal keyframes={customLeftAnimation}>
+        <Fade delay={1e1} cascade damping={1e-1}>
+          <div style={{backgroundColor: '#fff'}} className="relative overflow-hidden shadow-xl rounded-2xl flex bg-slate-800 h-[31.625rem] max-h-[60vh] sm:max-h-[none] lg:h-[34.6875rem] xl:h-[31.625rem] dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10 !h-auto max-h-[none] p-8">
+            <ContactForm />
+          </div>
+        </Fade>
+      </Reveal>
+    </section>
+  );
+};
 
-  </div>
-  </section>
-  )
-}
-
-export default Contact
+export default Contact;

@@ -11,13 +11,10 @@ module.exports = {
     },
     colors: {
       'bg-from': '#fff',
-      'cta-color':  '#44C9B0',
-      'cta-hover':  '#08A88A',
       'gray': '#000',
       'mute-gray': '#2d2e32',
       'white': '#fff',
       'bg-to': '#fff',
-      
     }
   },
   plugins: [],

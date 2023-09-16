@@ -15,11 +15,9 @@ body,
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* color: #fff; */
   position: relative;
 }
 body{
   overflow-x: hidden;
-  /* background-color: #000218; */
-  background-color:#ffffff;
+  background-color:#FAF9F6;
 }

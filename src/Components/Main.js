@@ -1,12 +1,9 @@
-import React, { useEffect, useLayoutEffect, useRef } from "react";
+import React, { useEffect} from "react";
 import "../styles/Main.css";
-import { gsap } from "gsap";
 import bgVid from "../assets/bgVid.mp4";
-import namasteEmoji from "../assets/namaste_emoji.png";
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
-import { Fade, Slide } from "react-awesome-reveal";
-import Container from "./Container";
+import { Fade } from "react-awesome-reveal";
 import profile from "../assets/profile.png";
 import htmlIcon from "../assets/html_icon.png";
 import cssIcon from "../assets/css_icon.png";
@@ -47,7 +44,6 @@ const Main = () => {
   }, []);
 
   const handleDownloadPDF = () => {
-    // Replace 'your-pdf-file.pdf' with the actual path to your PDF file
     const pdfFilePath =
       "https://drive.google.com/file/d/1ZEUkQlmoHyLfccYsgRQjMGhRWOOOSRsM/view?usp=sharing";
     const link = document.createElement("a");
@@ -90,7 +86,7 @@ const Main = () => {
                   <Reveal keyframes={customLeftAnimation}>
                     <button
                       onClick={handleDownloadPDF}
-                      className="btn-grad py-2 px-7 text-xl font-bold rounded-full"
+                      className="btn-grad py-2 px-7 text-xl font-bold rounded-full hover:shadow-lg"
                     >
                       Resume
                     </button>
@@ -103,7 +99,7 @@ const Main = () => {
                 <div className="">
                   <img
                     src={profile}
-                    style={{ width: "100%" }}
+                    style={{ width: "280px" }}
                     className={"object-cover"}
                     alt="Hero Illustration"
                     loading="eager"

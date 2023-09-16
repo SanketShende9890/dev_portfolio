@@ -1,14 +1,27 @@
 import React from "react";
 import namasteEmoji from "../assets/namaste_emoji.png";
 import slateBg from "../assets/slate-about.jpg";
+import Reveal from "react-awesome-reveal";
+import { keyframes } from "@emotion/react";
+import { Fade } from "react-awesome-reveal";
 
 const About = () => {
+  const customLeftAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translate(0, 100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }`;
   return (
     <section
-      className=" max-w-4xl py-10 px-6 text-gray mx-auto"
-      style={{ position: "relative" }}
-    >
-      <div className="relative overflow-hidden shadow-xl rounded-2xl flex bg-slate-800 h-[31.625rem] max-h-[60vh] sm:max-h-[none] lg:h-[34.6875rem] xl:h-[31.625rem] dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10 !h-auto max-h-[none] p-8">
+      className="relative max-w-4xl py-10 px-6 text-gray mx-auto">
+        <Reveal keyframes={customLeftAnimation}>
+        <Fade delay={1e1} cascade damping={1e-1}>
+      <div style={{backgroundColor: '#fff'}} className="relative overflow-hidden shadow-xl rounded-2xl flex bg-slate-800 h-[31.625rem] max-h-[60vh] sm:max-h-[none] lg:h-[34.6875rem] xl:h-[31.625rem] dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10 !h-auto max-h-[none] p-8">
         <div className="flex flex-col md:flex-row">
           <img
             className="object-cover w-full md:w-1/2 rounded-3xl h-72 md:h-72 "
@@ -29,6 +42,8 @@ const About = () => {
           </div>
         </div>
       </div>
+      </Fade>
+      </Reveal>
     </section>
   );
 };
