@@ -1,7 +1,15 @@
 .navbar{
 
 }
-.navbar h1{
+/* .navbar h1{
   font-family: 'Great Vibes', cursive;
   font-size: 60px;
+} */
+.social-icon{
+
+}
+.navbar svg{
+  cursor: pointer;
+  margin: 0 15px;
+  font-size: 25px;
 }

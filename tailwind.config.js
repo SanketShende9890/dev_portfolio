@@ -10,13 +10,13 @@ module.exports = {
       heading: ["Inconsolata"]
     },
     colors: {
-      'bg-from': '#01001A',
+      'bg-from': '#fff',
       'cta-color':  '#44C9B0',
       'cta-hover':  '#08A88A',
-      'gray': '#393939',
+      'gray': '#000',
       'mute-gray': '#2d2e32',
       'white': '#fff',
-      'bg-to': 'rgb(16, 32, 68)',
+      'bg-to': '#fff',
       
     }
   },

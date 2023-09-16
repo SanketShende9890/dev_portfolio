@@ -1,9 +1,37 @@
+.btn-grad {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 50rem !important;
+  background-image: linear-gradient(
+    111deg,
+    #e78754,
+    #cb5e8f,
+    #938ec1be,
+    #e9799a
+  );
+  filter: drop-shadow(1px 3px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.25));
+  /* box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75); */
+  background-size: 200% 100%;
+  border: none;
+  moz-transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.btn-grad:hover {
+  color: #fff;
+  background-position: 100% 0;
+  moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.tech-stack{
 
-
-
-
-
-.btn-grad{
-    background: linear-gradient(266deg, #CB5E8F -19.99%, #E78754 135.84%);
-    color: #fff;
+}
+.tech-stack img{
+    cursor: pointer;
+    width: 40px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }

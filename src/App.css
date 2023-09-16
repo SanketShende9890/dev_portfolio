@@ -27,7 +27,11 @@ header {
   z-index: -1; 
 }
 .nav-bg {
-  background-color: #151c35;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+  -webkit-backdrop-filter: blur(21px);
+  backdrop-filter: blur(21px);
+  border: 1px solid rgba(179, 179, 179, 0.4);
+  /* background-color: #151c35; */
 }
 :root {
   --primary: #44c9b0;
