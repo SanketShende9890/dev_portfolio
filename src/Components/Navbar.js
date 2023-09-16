@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "../styles/Navbar.css";
-import { FaBarsStaggered } from "react-icons/fa6";
+import { FaBarsStaggered, FaD } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
 import { FiDownload } from "react-icons/fi";
+import { Fade } from "react-awesome-reveal";
+
 
 const Navbar = () => {
   const [navMenu, setNavMenu] = useState(false);
@@ -126,33 +128,46 @@ const Navbar = () => {
           navMenu ? "h-screen" : " h-20 "
         } flex justify-between items-center w-full bg-black fixed object-center left-1/2 transform -translate-x-1/2 px-4 max-w-6xl mx-auto`}
       >
-        <div className="flex justify-between items-center w-full">
+        {/* <div className="flex justify-between items-center w-full"> */}
+        
+          <Fade>
           <h1
             onClick={scrollToHome}
-            className="text-4xl font-signature ml-2 mr-14 cursor-pointer text-cta-color"
-          >
+            className="text-4xl font-signature ml-2 mr-14 cursor-pointer text-gray"
+            >
             Sanket
           </h1>
-          <div className="hidden md:flex w-full justify-between">
+            </Fade>
+            <Fade>
+
+          <div className="hidden md:flex items-center justify-center">
             <ul className="flex items-center">
               {navbarList.map((items, index) => (
                 <li
                   key={index}
                   onClick={items.scrollFunc}
                   className="text-gray px-4 cursor-pointer capitalize font-medium  hover:scale-105 duration-200 hover:text-white"
-                >
+                  >
                   {items.link}
                 </li>
               ))}
             </ul>
+            </div>
+              </Fade>
+              <Fade>
+
+          <div className="hidden md:flex items-center justify-center">
+
             <button
               onClick={handleDownloadPDF}
               className="flex items-center font-medium py-2 px-4 rounded bg-cta-color hover:bg-cta-hover duration-200"
-            >
+              >
               <FiDownload className="mr-3" />
               Resume
             </button>
-          </div>
+            </div>
+
+              </Fade>
           <div
             onClick={() => setNavMenu(!navMenu)}
             className="cursor-pointer text-white flex md:hidden relative z-20"
@@ -166,7 +181,7 @@ const Navbar = () => {
               <FaBarsStaggered size={30} />
             )}
           </div>
-        </div>
+        {/* </div> */}
 
         {navMenu ? (
           <ul className="md:hidden flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-bg-from to-bg-to">

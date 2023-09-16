@@ -1,6 +1,7 @@
 import React,{useState, useEffect} from "react";
 import "./App.css";
 import Navbar from "./Components/Navbar";
+import Main from "./Components/Main";
 import Hero from "./Components/Hero";
 import About from "./Components/About";
 import Blog from "./Components/Blog";
@@ -60,6 +61,9 @@ function App() {
       {/* <header className={`${scrolling ? 'nav-bg': ''} fixed w-full top-0 left-1/2 transform -translate-x-1/2  h-20`} > */}
         <Navbar />
       {/* </header> */}
+      <section>
+      <Main/>
+      </section>
       <section className="hero-bg home-section">
         <Hero />
       </section>

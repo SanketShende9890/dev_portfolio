@@ -5,11 +5,11 @@ const Heading = ({ heading }) => {
   const innerText = heading;
   const closeTag = "/>";
   return (
-    <section className=" max-w-4xl pt-10 px-6 text-white mx-auto">
-      <h1 className="text-4xl m-0 font-heading font-bold text-cta-color">
-        <span className="text-white font-heading">{openTag}</span>
+    <section className=" max-w-4xl pt-10 px-6 mx-auto flex justify-center items-center">
+      <h1 className="text-4xl m-0 font-heading font-bold text-gray">
+        <span className="text-mute-gray font-heading">{openTag}</span>
         {innerText}
-        <span className="text-white font-heading">{closeTag}</span>{" "}
+        <span className="text-mute-gray font-heading">{closeTag}</span>{" "}
       </h1>
     </section>
   );
