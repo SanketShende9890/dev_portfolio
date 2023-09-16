@@ -4,7 +4,21 @@ import { FaBarsStaggered, FaD } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
 import { FiDownload } from "react-icons/fi";
 import { Fade } from "react-awesome-reveal";
+import Reveal from "react-awesome-reveal";
+import { keyframes } from "@emotion/react";
 
+
+const customTopAnimation = keyframes`
+  from {
+    opacity: 0;
+    transform: translate(0, 100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+`;
 
 const Navbar = () => {
   const [navMenu, setNavMenu] = useState(false);
@@ -123,6 +137,8 @@ const Navbar = () => {
         scrolling ? "nav-bg" : ""
       } fixed w-full top-0 left-1/2 transform -translate-x-1/2  h-20`}
     >
+      
+        <Fade delay={1e2} cascade damping={1e-1}>
       <nav
         className={`${
           navMenu ? "h-screen" : " h-20 "
@@ -206,6 +222,7 @@ const Navbar = () => {
           </ul>
         ) : null}
       </nav>
+      </Fade>
     </header>
   );
 };
