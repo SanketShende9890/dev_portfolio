@@ -120,7 +120,7 @@ const ContactForm = () => {
   return (
     <div className="contact-form-container ">
       <Card>
-        <h1 className="text-2xl text-gray">Let's talk..</h1>
+        <h1 className="text-2xl text-white">Let's talk..</h1>
         <Form>
           <TextInput
             {...name}
@@ -165,7 +165,7 @@ const Contact = () => {
     >
       <Reveal keyframes={customLeftAnimation}>
         <Fade delay={1e1} cascade damping={1e-1}>
-          <div style={{backgroundColor: '#fff'}} className="relative overflow-hidden shadow-xl rounded-2xl flex bg-slate-800 h-[31.625rem] max-h-[60vh] sm:max-h-[none] lg:h-[34.6875rem] xl:h-[31.625rem] dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10 !h-auto max-h-[none] p-8">
+          <div className="relative overflow-hidden shadow-xl rounded-2xl flex bg-slate-bg h-[31.625rem] max-h-[60vh] sm:max-h-[none] lg:h-[34.6875rem] xl:h-[31.625rem] dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10 !h-auto max-h-[none] p-8">
             <ContactForm />
           </div>
         </Fade>

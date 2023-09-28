@@ -15,6 +15,7 @@ module.exports = {
       'mute-gray': '#2d2e32',
       'white': '#fff',
       'bg-to': '#fff',
+      'slate-bg':'#313538'
     }
   },
   plugins: [],

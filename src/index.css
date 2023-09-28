@@ -18,7 +18,8 @@ body,
   position: relative;
 }
 body{
-  /* overflow-x: hidden !important; */
-  background-color:#FAF9F6;
+  overflow-x: hidden !important;
+  background-color:#232526;
+  color: #fff;
 }
 

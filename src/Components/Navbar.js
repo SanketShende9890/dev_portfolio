@@ -145,7 +145,7 @@ const Navbar = () => {
           <Fade>
             <h1
               onClick={scrollToHome}
-              className="text-4xl font-signature ml-2 mr-14 cursor-pointer text-gray"
+              className="text-4xl font-signature ml-2 mr-14 cursor-pointer text-white"
             >
               Sanket
             </h1>
@@ -157,7 +157,7 @@ const Navbar = () => {
                   <li
                     key={index}
                     onClick={items.scrollFunc}
-                    className="text-gray px-4 cursor-pointer capitalize font-medium  hover:scale-105 duration-200 hover:text-mute-gray"
+                    className="text-white px-4 cursor-pointer capitalize font-medium  hover:scale-105 duration-200 hover:text-mute-gray"
                   >
                     {items.link}
                   </li>
@@ -174,7 +174,7 @@ const Navbar = () => {
           </Fade>
           <div
             onClick={() => setNavMenu(!navMenu)}
-            className="cursor-pointer text-gray flex md:hidden relative z-20"
+            className="cursor-pointer text-white flex md:hidden relative z-20"
           >
             {navMenu ? (
               <IoClose

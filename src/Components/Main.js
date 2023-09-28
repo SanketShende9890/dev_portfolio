@@ -13,6 +13,7 @@ import mongoDbIcon from "../assets/mongoDb_icon.png";
 import expressIcon from "../assets/express_icon.png";
 import reactIcon from "../assets/react_icon.png";
 import nodeIcon from "../assets/node_icon.png";
+import vectorWaves from "../assets/vector_waves.png"; 
 
 const Main = () => {
   const customLeftAnimation = keyframes`
@@ -37,11 +38,11 @@ const Main = () => {
     transform: translate(0, 0);
   }
 `;
-  let vidType = "video/mp4";
-  useEffect(() => {
-    let vid = document.getElementById("vid");
-    vid.playbackRate = 1.8;
-  }, []);
+  // let vidType = "video/mp4";
+  // useEffect(() => {
+  //   let vid = document.getElementById("vid");
+  //   vid.playbackRate = 1.8;
+  // }, []);
 
   const handleDownloadPDF = () => {
     const pdfFilePath =
@@ -57,8 +58,9 @@ const Main = () => {
   return (
     <div className="section">
       <div className="video-container">
-        <video id="vid" src={bgVid} type={vidType} autoPlay loop muted></video>
-        <div className="overlay"></div>
+        {/* <video id="vid" src={bgVid} type={vidType} autoPlay loop muted></video>
+        <div className="overlay"></div> */}
+        <img className="overlay-vector-waves md:block hidden" src={vectorWaves} alt="vectorWaves" />
         <div className="text">
           <section className="flex flex-wrap container p-8 mx-auto xl:px-0">
             <div className="flex items-center w-full lg:w-1/2 pl-0 md:pl-6 lg:pl-10 xl:pl-40">
@@ -67,7 +69,7 @@ const Main = () => {
                   <Fade delay={1e1} cascade damping={1e-1}>
                     <h1
                       style={{ lineHeight: "1" }}
-                      className="text-4xl md:text-4xl lg:text-6xl xl:text-7xl font-bold leading-snug tracking-tight  text-gray  lg:leading-tight  xl:leading-tight"
+                      className="text-4xl md:text-4xl lg:text-6xl xl:text-7xl font-bold leading-snug tracking-tight  text-white  lg:leading-tight  xl:leading-tight"
                     >
                       Full Stack Developer
                     </h1>
@@ -135,7 +137,11 @@ const Main = () => {
           </section>
         </div>
       </div>
-      <div className="mask-grad"></div>
+      <div className="main-grad-1"></div>
+      <div className="main-grad-2"></div>
+      <div className="main-grad-3"></div>
+
+      {/* <div className="mask-grad"></div> */}
     </div>
   );
 };

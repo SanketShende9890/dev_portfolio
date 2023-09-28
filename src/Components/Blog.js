@@ -15,12 +15,11 @@ const Blog = () => {
     transform: translate(0, 0);
   }`;
   return (
-    <section className="max-w-4xl py-10 px-2 text-gray mx-auto relative">
+    <section className="max-w-4xl py-10 px-2 text-white mx-auto relative">
       <Reveal keyframes={customLeftAnimation}>
         <Fade delay={1e1} cascade damping={1e-1}>
           <div
-            style={{ backgroundColor: "#fff" }}
-            className="relative overflow-hidden shadow-xl rounded-2xl flex bg-slate-800  dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10  p-8"
+            className="relative overflow-hidden shadow-xl rounded-2xl flex bg-slate-bg  dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10  p-8"
           >
             <h1 className="text-2xl w-full flex items-baseline justify-center">
               Blog section is comming soon...
