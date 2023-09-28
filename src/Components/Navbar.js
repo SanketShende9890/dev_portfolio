@@ -186,12 +186,12 @@ const Navbar = () => {
             )}
           </div>
           {navMenu ? (
-            <ul className="md:hidden flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-bg-from to-bg-to">
+            <ul className="md:hidden flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-slate-bg">
               {navbarList.map((items, index) => (
                 <li
                   onClick={items.scrollFunc}
                   key={index}
-                  className="px-4 py-6 text-4xl cursor-pointer capitalize font-medium text-gray
+                  className="px-4 py-6 text-4xl cursor-pointer capitalize font-medium text-white
             hover:scale-105 duration-200 hover:text-white"
                 >
                   {items.link}
