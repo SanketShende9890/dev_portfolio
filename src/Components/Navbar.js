@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import "../styles/Navbar.css";
 import { FaBarsStaggered, FaD } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
-import { FiDownload } from "react-icons/fi";
+import { MdCancel } from "react-icons/md";
 import { Fade } from "react-awesome-reveal";
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 import { BiLogoDiscord } from "react-icons/bi";
+import toast, { Toaster } from "react-hot-toast";
 
 const customTopAnimation = keyframes`
   from {
@@ -23,6 +24,7 @@ const customTopAnimation = keyframes`
 
 const Navbar = () => {
   const [navMenu, setNavMenu] = useState(false);
+  const [optionActive, setOptionActive] = useState(false);
   const scrollToHome = () => {
     const homeSection = document.querySelector(".home-section");
     if (homeSection) {
@@ -135,9 +137,10 @@ const Navbar = () => {
   return (
     <header
       className={`${
-        scrolling ? "nav-bg" : ""
+        scrolling ? "bg-slate-bg" : ""
       } fixed w-full top-0 left-1/2 transform -translate-x-1/2 navbar h-20`}
     >
+      <Toaster position="top-right" reverseOrder={false} />
       <Fade delay={2e2} cascade damping={1e-1}>
         <nav
           className={`flex justify-between items-center w-full h-20 bg-black fixed object-center left-1/2 transform -translate-x-1/2 px-4 max-w-6xl mx-auto`}
@@ -167,9 +170,31 @@ const Navbar = () => {
           </Fade>
           <Fade>
             <div className="hidden md:flex items-center justify-center social-icon">
-              <AiFillLinkedin />
-              <AiFillGithub />
-              <BiLogoDiscord />
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/in/sanket-shende-a8a82a1a0/"
+              >
+                <AiFillLinkedin />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://github.com/">
+                <AiFillGithub />
+              </a>
+              <a
+                onClick={() =>
+                  toast((t) => (
+                    <span className="flex items-center justify-between">
+                      Discord is on break
+                      <MdCancel
+                        style={{ margin: "0 0 0 10px" }}
+                        onClick={() => toast.dismiss(t.id)}
+                      />
+                    </span>
+                  ))
+                }
+              >
+                <BiLogoDiscord />
+              </a>
             </div>
           </Fade>
           <div
@@ -198,9 +223,31 @@ const Navbar = () => {
                 </li>
               ))}
               <li className="px-4 py-6 text-4xl w-full flex justify-center items-center">
-                <AiFillLinkedin />
-                <AiFillGithub />
-                <BiLogoDiscord />
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://www.linkedin.com/in/sanket-shende-a8a82a1a0/"
+                >
+                  <AiFillLinkedin />
+                </a>
+                <a target="_blank" rel="noreferrer" href="https://github.com/">
+                  <AiFillGithub />
+                </a>
+                <a
+                  onClick={() =>
+                    toast((t) => (
+                      <span className="flex items-center justify-between">
+                        Discord is on break
+                        <MdCancel
+                          style={{ margin: "0 0 0 10px" }}
+                          onClick={() => toast.dismiss(t.id)}
+                        />
+                      </span>
+                    ))
+                  }
+                >
+                  <BiLogoDiscord />
+                </a>
               </li>
             </ul>
           ) : null}

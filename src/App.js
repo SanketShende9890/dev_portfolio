@@ -60,11 +60,11 @@ function App() {
       </section>
       <section style={{overflow: 'hidden'}}>
         <section className="about-section">
-          <Heading heading={"About me"} />
+          <Heading heading={"# About me"} />
           <About />
         </section>
         <section className="project-section">
-          <Heading heading={"Projects"} />
+          <Heading heading={"# Projects"} />
           <Slate
             title={"VoltRide"}
             description={

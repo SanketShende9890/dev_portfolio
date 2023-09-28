@@ -30,7 +30,7 @@ header {
   transform: rotate(90deg);
 } */
 .home-section {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .hero-bg::before {
   content: "";
@@ -42,17 +42,7 @@ header {
   background-color: rgba(0, 0, 0, 0.2);
   z-index: -1;
 }
-.nav-bg {
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.2) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-  -webkit-backdrop-filter: blur(21px);
-  backdrop-filter: blur(21px);
-  border: 1px solid rgba(179, 179, 179, 0.4);
-  /* background-color: #151c35; */
-}
+
 :root {
   --primary: #44c9b0;
   --secondary: #124;
@@ -352,7 +342,9 @@ video {
 .overlay-vector-waves{
   position: absolute;
   z-index: -1;
-  opacity: 0.4;
+  opacity: 0.3;
+  width: 100%;
+  top: -190px;
 }
 .text {
   padding-top: 90px;

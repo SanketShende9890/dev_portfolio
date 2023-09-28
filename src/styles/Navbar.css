@@ -1,14 +1,18 @@
-.navbar{
+.navbar {
 }
 /* .navbar h1{
   font-family: 'Great Vibes', cursive;
   font-size: 60px;
 } */
-.social-icon{
-
+.social-icon {
 }
-.navbar svg{
+.navbar svg {
   cursor: pointer;
   margin: 0 15px;
-  font-size: 25px;
+  font-size: 50px;
+}
+@media only screen and (min-width: 768px) {
+  .navbar svg {
+    font-size: 28px;
+  }
 }

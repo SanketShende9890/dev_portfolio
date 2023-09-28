@@ -60,7 +60,7 @@ const Main = () => {
       <div className="video-container">
         {/* <video id="vid" src={bgVid} type={vidType} autoPlay loop muted></video>
         <div className="overlay"></div> */}
-        <img className="overlay-vector-waves md:block hidden" src={vectorWaves} alt="vectorWaves" />
+        <img className="overlay-vector-waves lg:block hidden" src={vectorWaves} alt="vectorWaves" />
         <div className="text">
           <section className="flex flex-wrap container p-8 mx-auto xl:px-0">
             <div className="flex items-center w-full lg:w-1/2 pl-0 md:pl-6 lg:pl-10 xl:pl-40">
