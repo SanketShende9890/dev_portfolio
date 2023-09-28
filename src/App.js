@@ -58,7 +58,7 @@ function App() {
       <section className="home-section">
         <Main />
       </section>
-      <section>
+      <section style={{overflow: 'hidden'}}>
         <section className="about-section">
           <Heading heading={"About me"} />
           <About />
