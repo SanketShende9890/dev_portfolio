@@ -136,10 +136,12 @@ const Navbar = () => {
 
   return (
     <header
+    style={{borderRadius: '0'}}
       className={`${
-        scrolling ? "bg-slate-bg" : ""
+        scrolling ? "inner-grad-cont" : ""
       } fixed w-full top-0 left-1/2 transform -translate-x-1/2 navbar h-20`}
     >
+      
       <Toaster position="top-right" reverseOrder={false} />
       <Fade delay={2e2} cascade damping={1e-1}>
         <nav

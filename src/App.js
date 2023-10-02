@@ -10,6 +10,7 @@ import Footer from "./Components/Common/Footer";
 import Slate from "./Components/Common/Slate";
 import Heading from "./Components/Common/Heading";
 import voltRidePreview from "./assets/voltride-preview.jpg";
+import blogAppPreview from "./assets/project_preview_3.png";
 
 function App() {
   // const [scrolling, setScrolling] = useState(false);
@@ -55,6 +56,7 @@ function App() {
   return (
     <>
       <Navbar />
+      <div className="main-grad"></div>
       <section className="home-section">
         <Main />
       </section>
@@ -75,14 +77,16 @@ function App() {
             preview={voltRidePreview}
           />
           <Slate
-            title={"CoinBCX"}
+            title={"Ethereal Blogs"}
             description={
               "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the."
             }
             live={
-              "https://dribbble.com/shots/21971060-Design-Agency-Landing-Page"
+              "https://etherealblog.vercel.app/"
             }
-            code={"https://github.com/SanketShende9890/dev_portfolio"}
+            code={"https://github.com/SanketShende9890/BlogApp-client"}
+            preview={blogAppPreview}
+            customClass={"blog-section"}
           />
           <Slate
             title={"JETFLIX"}
@@ -105,10 +109,10 @@ function App() {
             code={"https://github.com/SanketShende9890/dev_portfolio"}
           />
         </section>
-        <section className="blog-section">
+        {/* <section className="">
           <Heading heading={"Blog"} />
           <Blog />
-        </section>
+        </section> */}
         <section className="contact-section">
           <Heading heading={"Contact"} />
           <Contact />

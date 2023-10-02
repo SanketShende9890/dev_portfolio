@@ -18,6 +18,15 @@ header {
   z-index: 2;
   text-transform: uppercase;
 }
+.main-grad{width: 1800px;
+  height: 1800px;
+  background-image: radial-gradient(circle closest-side at 60%,#122046,transparent);
+  border-radius: 100%;
+  position: absolute;
+  top: -415px;
+  bottom: auto;
+  left: auto;
+  right: -355px;}
 /* .grad-line {
   position: absolute;
   bottom: -4px;
@@ -236,7 +245,7 @@ header {
   height: 800px;
   flex-shrink: 0;
   border-radius: 396px;
-  background: rgba(255, 245, 160, 0.2);
+  background: rgba(225, 160, 255, 0.2);
   filter: blur(295px);
   transform: rotate(90deg);
 }
@@ -362,3 +371,16 @@ video {
   font-size: 25px;
   font-weight: 600;
 } */
+.outer-grad-cont{
+  -webkit-text-fill-color: inherit;
+  background-image: linear-gradient(267deg,#414144,transparent),linear-gradient(113deg,#192588,rgba(0,0,0,.06));
+  background-clip: padding-box;
+  border-radius: 10px;
+}
+.inner-grad-cont{
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  background-color: #090a0a;
+  background-image: radial-gradient(circle,#010c28,rgba(255,255,255,0));
+  border-radius: 10px;
+}

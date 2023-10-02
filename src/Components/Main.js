@@ -77,7 +77,7 @@ const Main = () => {
                 </Reveal>
                 <Reveal keyframes={customLeftAnimation}>
                   <Fade delay={1e1} cascade damping={1e-1}>
-                    <p className="py-5 text-md leading-normal text-gray-500 lg:text-lg xl:text-xl dark:text-gray-300">
+                    <p className="py-5 text-lg leading-normal text-gray-500 lg:text-lg xl:text-xl dark:text-gray-300">
                       Hi, I'm Sanket Shende. A passionate Full-Stack Developer
                       based in Nagpur, India.
                     </p>
@@ -139,7 +139,7 @@ const Main = () => {
       </div>
       <div className="main-grad-1"></div>
       <div className="main-grad-2"></div>
-      <div className="main-grad-3"></div>
+      {/* <div className="main-grad-3"></div> */}
 
       {/* <div className="mask-grad"></div> */}
     </div>

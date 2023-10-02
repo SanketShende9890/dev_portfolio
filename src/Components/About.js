@@ -17,11 +17,10 @@ const About = () => {
     transform: translate(0, 0);
   }`;
   return (
-    <section
-      className="relative max-w-4xl py-10 px-2 text-white mx-auto">
-        <Reveal keyframes={customLeftAnimation}>
+    <Reveal keyframes={customLeftAnimation}>
         <Fade delay={1e1} cascade damping={1e-1}>
-      <div className="relative overflow-hidden shadow-xl rounded-xl flex bg-slate-bg h-[31.625rem] max-h-[60vh] sm:max-h-[none] lg:h-[34.6875rem] xl:h-[31.625rem] dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10 !h-auto max-h-[none] p-4">
+          <section className="relative max-w-4xl my-10 text-white mx-auto outer-grad-cont">
+      <div className="relative overflow-hidden shadow-xl rounded-xl flex bg-slate-bg h-[31.625rem] max-h-[60vh] sm:max-h-[none] lg:h-[34.6875rem] xl:h-[31.625rem] dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10 !h-auto max-h-[none] p-4 inner-grad-cont">
         <div className="flex flex-col md:flex-row">
           <img
             className="object-cover w-full md:w-1/2 rounded-xl h-72 md:h-72 "
@@ -42,9 +41,9 @@ const About = () => {
           </div>
         </div>
       </div>
+    </section>
       </Fade>
       </Reveal>
-    </section>
   );
 };
 

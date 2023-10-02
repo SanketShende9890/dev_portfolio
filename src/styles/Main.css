@@ -53,7 +53,7 @@
   left: -250px;
   z-index: -5;
   border-radius: 361px;
-  background: #29a0e8;
+  background: rgba(41, 159, 232, 0.7);
   filter: blur(126.5px);
   width: 361px;
   height: 361px;
@@ -65,14 +65,14 @@
   left: -78px;
   z-index: -5;
   border-radius: 361px;
-  background: #5937a0;
+  background: rgba(88, 55, 160, 0.7);
   filter: blur(125px);
   width: 361px;
   height: 230px;
   flex-shrink: 0;
   z-index: -6;
 }
-.main-grad-3 {
+/* .main-grad-3 {
   position: absolute;
   top: 375px;
   right: -170px;
@@ -83,7 +83,7 @@
   height: 249px;
   flex-shrink: 0;
   z-index: -6;
-}
+} */
 
 @media only screen and (min-width:786px) {
   .main-grad-3 {

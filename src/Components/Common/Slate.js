@@ -1,11 +1,12 @@
 import React from 'react';
 import {AiFillGithub} from 'react-icons/ai';
+import {RiShareCircleFill} from 'react-icons/ri';
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 import { Fade } from "react-awesome-reveal";
 
 
-const Slate = ({title,description,code,live,preview}) => {
+const Slate = ({title,description,code,live,preview,customClass}) => {
   const customLeftAnimation = keyframes`
   from {
     opacity: 0;
@@ -18,11 +19,11 @@ const Slate = ({title,description,code,live,preview}) => {
   }`;
   return (
     <section
-    className="max-w-4xl py-10 px-2 text-white mx-auto relative">
+    className={`${customClass} max-w-4xl py-10 px-2 text-white mx-auto relative`}>
     <Reveal keyframes={customLeftAnimation}>
         <Fade delay={1e1} cascade damping={1e-1}>
-    <div className="relative overflow-hidden shadow-xl rounded-2xl flex bg-slate-bg h-[31.625rem] max-h-[60vh] sm:max-h-[none] lg:h-[34.6875rem] xl:h-[31.625rem] dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10 !h-auto max-h-[none] p-4">
-      <div className="flex flex-col md:flex-row w-full">
+    <div className="outer-grad-cont relative overflow-hidden shadow-xl rounded-2xl flex bg-slate-bg h-[31.625rem] max-h-[60vh] sm:max-h-[none] lg:h-[34.6875rem] xl:h-[31.625rem] dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10 !h-auto max-h-[none]">
+      <div className="inner-grad-cont flex flex-col md:flex-row w-full p-4">
           <img
           className="object-cover w-full md:w-1/2 rounded-xl h-72 md:h-72 "
           src={preview}
@@ -39,12 +40,13 @@ const Slate = ({title,description,code,live,preview}) => {
           </p>
           </div>
           <div className='mt-8 md:mt-auto w-full flex justify-around items-center'>
-            <a href={live} target='_blank' rel='noreferrer' className='bg-transparent hover:border-cta-color hover:text-cta-color duration-300 font-semibold py-2 px-4 border rounded-full'>
-                Live Preview
+            <a href={code} target='_blank' rel='noreferrer' className='flex items-center bg-transparent font-semibold hover:border-cta-color hover:text-cta-color py-2 px-4 border rounded-full tracking-wider'>
+                <AiFillGithub className='mr-2 text-xl'/>
+                CODE
             </a>
-            <a href={code} target='_blank' rel='noreferrer' className='flex items-center bg-transparent font-semibold hover:border-cta-color hover:text-cta-color py-2 px-4 border rounded-full'>
-                <AiFillGithub className='mr-2 text-2xl'/>
-                Code
+            <a href={live} target='_blank' rel='noreferrer' className='flex items-center bg-transparent hover:border-cta-color hover:text-cta-color duration-300 font-semibold py-2 px-4 border rounded-full tracking-wider'>
+                LIVE
+                <RiShareCircleFill className='ml-2 text-xl' />
             </a>
           </div>
         </div>

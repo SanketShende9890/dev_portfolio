@@ -159,18 +159,18 @@ const Contact = () => {
     transform: translate(0, 0);
   }`;
   return (
-    <section
-      className="max-w-4xl py-10 px-2 text-white mx-auto "
-      style={{ position: "relative" }}
-    >
-      <Reveal keyframes={customLeftAnimation}>
+    <Reveal keyframes={customLeftAnimation}>
         <Fade delay={1e1} cascade damping={1e-1}>
-          <div className="relative overflow-hidden shadow-xl rounded-2xl flex bg-slate-bg h-[31.625rem] max-h-[60vh] sm:max-h-[none] lg:h-[34.6875rem] xl:h-[31.625rem] dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10 !h-auto max-h-[none] p-8">
+        <section
+          className="max-w-4xl my-10 text-white mx-auto outer-grad-cont"
+          style={{ position: "relative" }}
+        >
+          <div className="relative overflow-hidden shadow-xl rounded-2xl flex inner-grad-cont h-[31.625rem] max-h-[60vh] sm:max-h-[none] lg:h-[34.6875rem] xl:h-[31.625rem] dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10 !h-auto max-h-[none] p-8">
             <ContactForm />
           </div>
+    </section>
         </Fade>
       </Reveal>
-    </section>
   );
 };
 
