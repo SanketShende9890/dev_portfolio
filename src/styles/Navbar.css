@@ -1,4 +1,5 @@
 .navbar {
+  overflow: hidden;
 }
 /* .navbar h1{
   font-family: 'Great Vibes', cursive;

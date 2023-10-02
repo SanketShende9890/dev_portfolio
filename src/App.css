@@ -18,9 +18,11 @@ header {
   z-index: 2;
   text-transform: uppercase;
 }
-.main-grad{width: 1800px;
+.main-grad{
+  width: 1800px;
   height: 1800px;
-  background-image: radial-gradient(circle closest-side at 60%,#122046,transparent);
+  background-image: radial-gradient(circle closest-side at 60%,rgba(251, 140, 120, 0.2),transparent);
+  /* background-image: radial-gradient(circle closest-side at 60%,#122046,transparent); */
   border-radius: 100%;
   position: absolute;
   top: -415px;
@@ -224,17 +226,14 @@ header {
   filter: blur(295px);
 }
 .grad-2 {
+  width: 1800px;
+  height: 1800px;
+  background-image: radial-gradient(circle closest-side at 60%,rgba(251, 140, 120, 0.2),transparent);
+  border-radius: 100%;
   position: absolute;
-  z-index: 0;
   left: -280px;
   top: 60px;
-  width: 396px;
-  height: 800px;
-  flex-shrink: 0;
-  border-radius: 50%;
-  background: rgba(251, 140, 120, 0.2);
   filter: blur(295px);
-  transform: rotate(60deg);
 }
 .grad-3 {
   position: absolute;
@@ -378,8 +377,9 @@ video {
   border-radius: 10px;
 }
 .inner-grad-cont{
-  -webkit-backdrop-filter: blur(4px);
-  backdrop-filter: blur(4px);
+  border: 1px solid #dfdfdf2e;
+  /* -webkit-backdrop-filter: blur(4px); */
+  /* backdrop-filter: blur(4px); */
   background-color: #090a0a;
   background-image: radial-gradient(circle,#010c28,rgba(255,255,255,0));
   border-radius: 10px;

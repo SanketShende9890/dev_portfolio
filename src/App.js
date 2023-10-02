@@ -54,13 +54,13 @@ function App() {
   // }, []);
 
   return (
-    <>
+    <div style={{overflow: 'hidden'}}>
       <Navbar />
       <div className="main-grad"></div>
       <section className="home-section">
         <Main />
       </section>
-      <section style={{overflow: 'hidden'}}>
+      <section style={{overflow: 'hidden', padding: '0 10px'}}>
         <section className="about-section">
           <Heading heading={"# About me"} />
           <About />
@@ -130,7 +130,7 @@ function App() {
       <footer>
         <Footer />
       </footer>
-    </>
+    </div>
   );
 }
 

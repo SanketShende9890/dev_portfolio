@@ -18,12 +18,12 @@ const Slate = ({title,description,code,live,preview,customClass}) => {
     transform: translate(0, 0);
   }`;
   return (
-    <section
-    className={`${customClass} max-w-4xl py-10 px-2 text-white mx-auto relative`}>
     <Reveal keyframes={customLeftAnimation}>
         <Fade delay={1e1} cascade damping={1e-1}>
-    <div className="outer-grad-cont relative overflow-hidden shadow-xl rounded-2xl flex bg-slate-bg h-[31.625rem] max-h-[60vh] sm:max-h-[none] lg:h-[34.6875rem] xl:h-[31.625rem] dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10 !h-auto max-h-[none]">
-      <div className="inner-grad-cont flex flex-col md:flex-row w-full p-4">
+      <section
+      className={`${customClass} max-w-4xl my-10 text-white mx-auto relative outer-grad-cont`}>
+    <div className="relative overflow-hidden shadow-xl rounded-xl flex bg-slate-bg h-[31.625rem] max-h-[60vh] sm:max-h-[none] lg:h-[34.6875rem] xl:h-[31.625rem] dark:bg-slate-900/70 dark:backdrop-blur dark:ring-1 dark:ring-inset dark:ring-white/10 !h-auto max-h-[none] inner-grad-cont">
+      <div className="flex flex-col md:flex-row w-full p-4">
           <img
           className="object-cover w-full md:w-1/2 rounded-xl h-72 md:h-72 "
           src={preview}
@@ -52,9 +52,9 @@ const Slate = ({title,description,code,live,preview,customClass}) => {
         </div>
       </div>
     </div>
+  </section>
     </Fade>
     </Reveal>
-  </section>
   )
 }
 

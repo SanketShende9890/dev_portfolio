@@ -136,7 +136,7 @@ const Navbar = () => {
 
   return (
     <header
-    style={{borderRadius: '0'}}
+    style={{borderRadius: '0', border: 'none'}}
       className={`${
         scrolling ? "inner-grad-cont" : ""
       } fixed w-full top-0 left-1/2 transform -translate-x-1/2 navbar h-20`}
