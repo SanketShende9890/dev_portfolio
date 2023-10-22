@@ -11,6 +11,7 @@ import Slate from "./Components/Common/Slate";
 import Heading from "./Components/Common/Heading";
 import voltRidePreview from "./assets/voltride-preview.jpg";
 import blogAppPreview from "./assets/project_preview_3.png";
+import cryptoAppPreview from "./assets/crypto_app.png";
 
 function App() {
   // const [scrolling, setScrolling] = useState(false);
@@ -89,14 +90,15 @@ function App() {
             customClass={"blog-section"}
           />
           <Slate
-            title={"JETFLIX"}
+            title={"CryptoCoins"}
             description={
               "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the."
             }
+            preview={cryptoAppPreview}
             live={
-              "https://dribbble.com/shots/21971060-Design-Agency-Landing-Page"
+              "https://coinbcx.vercel.app/"
             }
-            code={"https://github.com/SanketShende9890/dev_portfolio"}
+            code={"https://github.com/SanketShende9890/cryptoTracker"}
           />
           <Slate
             title={"To Do List"}
