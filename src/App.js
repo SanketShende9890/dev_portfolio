@@ -11,7 +11,7 @@ import Slate from "./Components/Common/Slate";
 import Heading from "./Components/Common/Heading";
 import voltRidePreview from "./assets/voltride-preview.jpg";
 import blogAppPreview from "./assets/project_preview_3.png";
-import cryptoAppPreview from "./assets/crypto_app.png";
+import cryptoAppPreview from "./assets/crypto_app_preview.jpg";
 
 function App() {
   // const [scrolling, setScrolling] = useState(false);
@@ -96,7 +96,7 @@ function App() {
             }
             preview={cryptoAppPreview}
             live={
-              "https://coinbcx.vercel.app/"
+              "https://cryptolly-app.vercel.app/"
             }
             code={"https://github.com/SanketShende9890/cryptoTracker"}
           />

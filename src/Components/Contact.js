@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
 import { Fade } from "react-awesome-reveal";
+import emailjs from '@emailjs/browser';
 
 const Card = ({ children }) => <div className="contact-card">{children}</div>;
 
@@ -117,30 +118,76 @@ const ContactForm = () => {
 
   const { name, email, message } = state;
 
+  const serviceId = 'service_6s8xvzt';
+  const publicKey = 'o7KpYmg8ix6thE3jj';
+  const templateId = 'template_zm3uvir';
+
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    console.log("sent eamil");
+    emailjs.sendForm(serviceId, templateId, form.current, publicKey)
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
   return (
     <div className="contact-form-container ">
       <Card>
         <h1 className="text-2xl text-white">Let's talk..</h1>
-        <Form>
+        <form ref={form} onSubmit={sendEmail}>
+          <div className="flex-col">
+
+          <div className="my-3">
+
+      <label>Name</label>
+      <input type="text" style={{color: '#000'}} name="user_name" />
+          </div>
+          <div className="my-3">
+
+      <label>Email</label>
+      <input type="email" style={{color: '#000'}} name="user_email" />
+          </div>
+          <div className="my-3">
+
+      <label>Message</label>
+      <textarea style={{color: '#000'}} name="message" />
+          </div>
+          <div className="my-3">
+
+      <input className="btn" type="submit" value="Send" />
+          </div>
+          </div>
+    </form>
+        <Form >
           <TextInput
+          name="user_name"
             {...name}
             onFocus={handleFocus}
             onBlur={handleBlur}
             onChange={handleChange}
           />
           <TextInput
+           name="user_email" 
             {...email}
             onFocus={handleFocus}
             onBlur={handleBlur}
             onChange={handleChange}
           />
           <TextArea
+          name="message"
             {...message}
             onFocus={handleFocus}
             onBlur={handleBlur}
             onChange={handleChange}
           />
-          <Button>SEND</Button>
+          <Button type="submit" value="Send">SEND</Button>
         </Form>
       </Card>
     </div>
